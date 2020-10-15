@@ -1,0 +1,83 @@
+<html>
+<head>
+<link rel="icon" href="file:///home/chronos/u-6f0d8efa90acf196e13b6ce391490be2f9f1e633/MyFiles/Downloads/Screenshot%202020-10-15%20at%2011.05.36%20AM.png">
+</head>
+<body onclick="start()">
+<div class="border">
+<br>
+<div class="red-light" id="red-light"></div><br><br>
+<div class="yel-light" id="yel-light"></div><br><br>
+<div class="green-light" id="green-light"></div>
+</div>
+<style>
+.border {
+height: 110%;
+width: 25%;
+background-color: black;
+margin: auto;
+}
+.red-light {
+border-radius: 50%;
+border-style: solid;
+border-color: #00000000;
+background-color: red;
+height: 200px;
+width: 200px;
+margin: auto;
+}
+.yel-light {
+border-radius: 50%;
+border-style: solid;
+border-color: #00000000;
+background-color: yellow;
+height: 200px;
+width: 200px;
+margin: auto;
+}
+.green-light {
+border-radius: 50%;
+border-style: solid;
+border-color: #00000000;
+background-color: lime;
+height: 200px;
+width: 200px;
+margin: auto;
+}
+</style>
+<script>
+var red = document.getElementById("red-light");
+var yellow = document.getElementById("yel-light");
+var green = document.getElementById("green-light");
+var i = 0;
+function start() {
+i++;
+if(i == 1) {
+red.style.backgroundColor = "red";
+yellow.style.backgroundColor = "#929200";
+green.style.backgroundColor = "green";
+}
+if(i == 2) {
+red.style.backgroundColor = "darkred";
+yellow.style.backgroundColor = "yellow";
+green.style.backgroundColor = "green";
+}
+if(i == 3) {
+green.style.backgroundColor = "lime";
+yellow.style.backgroundColor = "#929200";
+red.style.backgroundColor = "darkred";
+}
+if(i == 4) {
+green.style.backgroundColor = "green";
+yellow.style.backgroundColor = "yellow";
+red.style.backgroundColor = "darkred";
+}
+if(i == 5) {
+green.style.backgroundColor = "green";
+yellow.style.backgroundColor = "#929200";
+red.style.backgroundColor = "red";
+}
+if(i > 3) {
+i = 0;
+}
+}
+</script>
